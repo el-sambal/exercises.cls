@@ -4,7 +4,7 @@
 <svg
    width="406.89673mm"
    height="120.63612mm"
-   viewBox="0 0 406.89673 120.6361"
+   viewBox="0 0 406.89673 120.63609"
    version="1.1"
    id="svg124"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.5"
-     inkscape:cx="-49"
-     inkscape:cy="-18"
+     inkscape:zoom="1.8101934"
+     inkscape:cx="156.6131"
+     inkscape:cy="233.6767"
      inkscape:window-width="1920"
      inkscape:window-height="1023"
      inkscape:window-x="0"
@@ -52,10 +52,10 @@
     </linearGradient>
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : -70.071719 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="210 : -70.071719 : 1"
-       inkscape:persp3d-origin="105 : -119.57172 : 1"
+       inkscape:vp_x="0 : -70.071726 : 1"
+       inkscape:vp_y="0 : 999.99998 : 0"
+       inkscape:vp_z="210.00002 : -70.071726 : 1"
+       inkscape:persp3d-origin="105.00001 : -119.57173 : 1"
        id="perspective35521" />
     <rect
        x="-297.37527"
@@ -94,6 +94,45 @@
          inkscape:collect="always"
          stdDeviation="0.020063795"
          id="feGaussianBlur35421" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter843"
+       x="-0.0041386276"
+       y="-0.0043824588"
+       width="1.0080016"
+       height="1.0087658">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.019797027"
+         id="feGaussianBlur845" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter847"
+       x="-0.004137485"
+       y="-0.0042812265"
+       width="1.0082745"
+       height="1.0076165">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.020051"
+         id="feGaussianBlur849" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter851"
+       x="-0.0040425935"
+       y="-0.0044511368"
+       width="1.0080849"
+       height="1.0089026">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.019859304"
+         id="feGaussianBlur853" />
     </filter>
   </defs>
   <g
@@ -160,7 +199,7 @@
        transform="scale(0.26458333)" />
     <path
        sodipodi:type="spiral"
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.26929;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.26929;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter851)"
        id="path34470"
        sodipodi:cx="-623.68115"
        sodipodi:cy="-308.9126"
@@ -186,7 +225,7 @@
        transform="scale(0.26458333)" />
     <path
        sodipodi:type="spiral"
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.26929;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.26929;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter843)"
        id="path35446"
        sodipodi:cx="-623.68115"
        sodipodi:cy="-308.9126"
@@ -199,7 +238,7 @@
        transform="scale(0.26458333)" />
     <path
        sodipodi:type="spiral"
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.26929;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.26929;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter847)"
        id="path35565"
        sodipodi:cx="-623.68115"
        sodipodi:cy="-308.9126"
