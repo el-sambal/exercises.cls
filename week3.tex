@@ -19,23 +19,21 @@ Prove that for all $n\in\N_0$, for all finite sets $A_1,A_2,\dots,A_n$, \[\left|
 	\begingroup
 	\allowdisplaybreaks % to allow the align* to break up over pages
 	\begin{align*}
-		    & \left|\bigcup_{i=1}^{k+1} A_i\right|                                                                                                                                                                                                  \\
-		    & \text{\red{(expanding big union)}}                                                                                                                                                                                                    \\
-		=~~ & \left|\left(\bigcup_{i=1}^{k} A_i\right)\cup A_{k+1}\right|                                                                                                                                                                           \\
-		    & \text{\red{(using base case $n=2$)}}                                                                                                                                                                                                  \\
-		=~~ & \left|\bigcup_{i=1}^{k} A_i\right| + |A_{k+1}| - \left|\left(\bigcup_{i=1}^{k} A_i\right)\cap A_{k+1}\right|                                                                                                                          \\
-		    & \text{\red{(applying distributivity of $\cap$ over $\cup$)}}                                                                                                                                                                          \\
-		=~~ & \left|\bigcup_{i=1}^{k} A_i\right| + |A_{k+1}| - \left|\bigcup_{i=1}^{k} (A_i\cap A_{k+1})\right|                                                                                                                                     \\
-		    & \text{\red{(applying induction hypothesis twice)}}                                                                                                                                                                                    \\
-		=~~ & \left(\sum_{\emptyset\neq J\subseteq\{1,\dots,k\}}(-1)^{|J|+1}\left|\bigcap_{j\in J}A_j\right|\right) + |A_{k+1}| - \sum_{\emptyset\neq J\subseteq\{1,\dots,k\}}(-1)^{|J|+1}\left|\bigcap_{j\in J}(A_j\cap A_{k+1})\right|            \\
-		    & \text{\red{(applying distributivity of $\cap$ over $\cup$)}}                                                                                                                                                                          \\
-		=~~ & \left(\sum_{\emptyset\neq J\subseteq\{1,\dots,k\}}(-1)^{|J|+1}\left|\bigcap_{j\in J}A_j\right|\right) + |A_{k+1}| - \sum_{\emptyset\neq J\subseteq\{1,\dots,k\}}(-1)^{|J|+1}\left|\left(\bigcap_{j\in J}A_j\right)\cap A_{k+1}\right| \\
-		    & \text{\red{(rewriting sum on the right by including $k+1$ in $J$; note the sign flip)}}                                                                                                                                               \\
-		=~~ & \left(\sum_{\emptyset\neq J\subseteq\{1,\dots,k\}}(-1)^{|J|+1}\left|\bigcap_{j\in J}A_j\right|\right) + |A_{k+1}| + \sum_{\substack{J\subseteq\{1,\dots,k+1\}                                                                         \\\text{s.t. }k+1\in J\\\text{and }|J|>1}}(-1)^{|J|+1}\left|\bigcap_{j\in J}A_j\right| \\
-		    & \text{\red{(absorbing $|A_{k+1}|$ into sum on the right, and rewriting bounds of sum on the left)}}                                                                                                                                   \\
-		=~~ & \left(\sum_{\substack{\emptyset\neq J\subseteq\{1,\dots,k+1\}                                                                                                                                                                         \\\text{s.t. }k+1\notin J}}(-1)^{|J|+1}\left|\bigcap_{j\in J}A_j\right|\right) + \sum_{\substack{\emptyset\neq J\subseteq\{1,\dots,k+1\}                                                                       \\\text{s.t. }k+1\in J}}(-1)^{|J|+1}\left|\bigcap_{j\in J}A_j\right| \\
-		    & \text{\red{(taking both sums together)}}                                                                                                                                                                                              \\
-		=~~ & \sum_{\emptyset\neq J\subseteq\{1,\dots,k+1\}                                                                       }(-1)^{|J|+1}\left|\bigcap_{j\in J}A_j\right|                                                                     \\
+		    & \left|\bigcup_{i=1}^{k+1} A_i\right|                                                                                                                                                                                       \\
+		    & \text{\red{(expanding big union)}}                                                                                                                                                                                         \\
+		=~~ & \left|\left(\bigcup_{i=1}^{k} A_i\right)\cup A_{k+1}\right|                                                                                                                                                                \\
+		    & \text{\red{(using base case $n=2$)}}                                                                                                                                                                                       \\
+		=~~ & \left|\bigcup_{i=1}^{k} A_i\right| + |A_{k+1}| - \left|\left(\bigcup_{i=1}^{k} A_i\right)\cap A_{k+1}\right|                                                                                                               \\
+		    & \text{\red{(applying distributivity of $\cap$ over $\cup$)}}                                                                                                                                                               \\
+		=~~ & \left|\bigcup_{i=1}^{k} A_i\right| + |A_{k+1}| - \left|\bigcup_{i=1}^{k} (A_i\cap A_{k+1})\right|                                                                                                                          \\
+		    & \text{\red{(applying induction hypothesis twice)}}                                                                                                                                                                         \\
+		=~~ & \left(\sum_{\emptyset\neq J\subseteq\{1,\dots,k\}}(-1)^{|J|+1}\left|\bigcap_{j\in J}A_j\right|\right) + |A_{k+1}| - \sum_{\emptyset\neq J\subseteq\{1,\dots,k\}}(-1)^{|J|+1}\left|\bigcap_{j\in J}(A_j\cap A_{k+1})\right| \\
+		    & \text{\red{(rewriting sum on the right by including $k+1$ in $J$; note the sign flip)}}                                                                                                                                    \\
+		=~~ & \left(\sum_{\emptyset\neq J\subseteq\{1,\dots,k\}}(-1)^{|J|+1}\left|\bigcap_{j\in J}A_j\right|\right) + |A_{k+1}| + \sum_{\substack{J\subseteq\{1,\dots,k+1\}                                                              \\\text{s.t. }k+1\in J\\\text{and }|J|>1}}(-1)^{|J|+1}\left|\bigcap_{j\in J}A_j\right| \\
+		    & \text{\red{(absorbing $|A_{k+1}|$ into sum on the right, and rewriting bounds of sum on the left)}}                                                                                                                        \\
+		=~~ & \left(\sum_{\substack{\emptyset\neq J\subseteq\{1,\dots,k+1\}                                                                                                                                                              \\\text{s.t. }k+1\notin J}}(-1)^{|J|+1}\left|\bigcap_{j\in J}A_j\right|\right) + \sum_{\substack{\emptyset\neq J\subseteq\{1,\dots,k+1\}                                                                       \\\text{s.t. }k+1\in J}}(-1)^{|J|+1}\left|\bigcap_{j\in J}A_j\right| \\
+		    & \text{\red{(taking both sums together)}}                                                                                                                                                                                   \\
+		=~~ & \sum_{\emptyset\neq J\subseteq\{1,\dots,k+1\}                                                                       }(-1)^{|J|+1}\left|\bigcap_{j\in J}A_j\right|                                                          \\
 	\end{align*}
 	\endgroup
 
@@ -96,6 +94,6 @@ Or here:
 \end{oneparcheckboxes}
 
 \begin{solution}
-    Note that, thanks to the \texttt{exam} class, the correct answer is marked with a checkmark if and only if the document is compiled with printing of the answers enabled (e.g. by passing the option \texttt{answers} to the \texttt{exercises} class). 
-    \QAuthor{question author: Mr. Hitchhiker}
+	Note that, thanks to the \texttt{exam} class, the correct answer is marked with a checkmark if and only if the document is compiled with printing of the answers enabled (e.g. by passing the option \texttt{answers} to the \texttt{exercises} class).
+	\QAuthor{question author: Mr. Hitchhiker}
 \end{solution}
