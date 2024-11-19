@@ -18,7 +18,7 @@ Note that solutions will not be printed, unless the `answers` option is passed t
 
 ---
 
-***WITH SOLUTIONS***, it looks like this:
+***WITH SOLUTIONS***, it looks like this (click [HERE](https://el-sambal.github.io/exercises.cls/with-answers.pdf) for an actual pdf):
 
 ---
 ![output-1](https://github.com/user-attachments/assets/f76b33b8-e997-431b-9bcd-ed1ef4b03f3b)
@@ -37,7 +37,7 @@ Note that solutions will not be printed, unless the `answers` option is passed t
 
 ---
 
-***WITHOUT SOLUTIONS***, it looks like this:
+***WITHOUT SOLUTIONS***, it looks like this (click [HERE](https://el-sambal.github.io/exercises.cls/without-answers.pdf) for an actual pdf):
 
 ---
 
