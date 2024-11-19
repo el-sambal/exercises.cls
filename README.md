@@ -21,19 +21,22 @@ Note that solutions will not be printed, unless the `answers` option is passed t
 ***WITH SOLUTIONS***, it looks like this (click [HERE](https://el-sambal.github.io/exercises.cls/with-answers.pdf) for an actual pdf):
 
 ---
-![output-1](https://github.com/user-attachments/assets/f76b33b8-e997-431b-9bcd-ed1ef4b03f3b)
+
+![with-answers-1](https://github.com/user-attachments/assets/f1d7d510-1963-4512-b491-41568f0eaa18)
 
 ---
 
-![output-2](https://github.com/user-attachments/assets/c73245e7-ed69-4c52-8668-2a3b9eae5282)
+![with-answers-2](https://github.com/user-attachments/assets/dc76f08b-d40c-4c68-853d-d5604a653722)
 
 ---
 
-![output-3](https://github.com/user-attachments/assets/bcc25b15-813e-4e09-8b9d-3c5c95b4921e)
+![with-answers-3](https://github.com/user-attachments/assets/9019e0f9-fdc8-4750-ae31-5979a50ee479)
 
 ---
 
-![output-4](https://github.com/user-attachments/assets/0ba99872-7988-4042-b67c-c627cdccb182)
+![with-answers-4](https://github.com/user-attachments/assets/40cd7b87-91a9-424f-ba48-467eaf4d21af)
+
+---
 
 ---
 
@@ -41,10 +44,11 @@ Note that solutions will not be printed, unless the `answers` option is passed t
 
 ---
 
-![output-1](https://github.com/user-attachments/assets/25f336b4-40b0-4985-89a4-dd3c011c1a94)
+![without-answers-1](https://github.com/user-attachments/assets/f14a284c-f4cc-40d9-9a5a-9b7fc1cd5de2)
 
 ---
 
-![output-2](https://github.com/user-attachments/assets/3058ce42-8dd2-4b72-af87-43e86f5350be)
+![without-answers-2](https://github.com/user-attachments/assets/489ad630-6369-482b-b990-3ffa7fbe1963)
+
 
 
