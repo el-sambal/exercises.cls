@@ -82,13 +82,14 @@
 			(frame.north east) -- (cont.east);
 		},
 	title={#1},
-	grow to left by={#2}
+	grow to left by={#2},
+	parbox=false % to mimic \usepackage{parskip} inside the box
 }
 
 % custom solution boxes
 \renewenvironment{TheSolution}{
 	% grow solution boxes 6mm to the left, so that they appear to be
-    % in the middle of the page (not impacted by question indentation)
+	% in the middle of the page (not impacted by question indentation)
 	\begin{nicebox}{Solution}{6mm}
 		}{
 	\end{nicebox}
