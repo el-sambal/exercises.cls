@@ -16,6 +16,8 @@ Note that solutions will not be printed, unless the `answers` option is passed t
 
 ---
 
+Note to RUG staff: the RUG logo can be found [HERE](https://www.rug.nl/about-ug/practical-matters/huisstijl/logobank-new/corporatelogo/). One can obtain a pdf version of this logo by downloading e.g. the *horizontal logo, English version, RGB-EPS format*, and then using a tool like `epstopdf` to convert the `.eps` file into a pdf. One can then replace the placeholder logo in this repository by the generated pdf. The benefit of going through this (somewhat lengthy) procedure is that one obtains a logo that is infinitely zoomable, because `eps` is a vector image format. Note that I do not own the RUG logo, and any use of it is subject to rules and regulations posed by the University of Groningen.
+
 ---
 
 ***WITH SOLUTIONS***, it looks like this (click [HERE](https://el-sambal.github.io/exercises.cls/with-answers.pdf) for an actual pdf):
