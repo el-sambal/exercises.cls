@@ -22,19 +22,19 @@ Note that solutions will not be printed, unless the `answers` option is passed t
 
 ---
 
-![with-answers-1](https://github.com/user-attachments/assets/f1d7d510-1963-4512-b491-41568f0eaa18)
+![with-answers-1](https://github.com/user-attachments/assets/5f6ba236-86e5-4415-ade8-3e9411deb4ed)
 
 ---
 
-![with-answers-2](https://github.com/user-attachments/assets/dc76f08b-d40c-4c68-853d-d5604a653722)
+![with-answers-2](https://github.com/user-attachments/assets/20deb28c-9b5e-49ef-bb5d-be8c06cb5b69)
 
 ---
 
-![with-answers-3](https://github.com/user-attachments/assets/9019e0f9-fdc8-4750-ae31-5979a50ee479)
+![with-answers-3](https://github.com/user-attachments/assets/98273ac8-fbfc-4bf0-9164-4001db7c5641)
 
 ---
 
-![with-answers-4](https://github.com/user-attachments/assets/40cd7b87-91a9-424f-ba48-467eaf4d21af)
+![with-answers-4](https://github.com/user-attachments/assets/bc576779-fe71-4d6e-8f29-2691c67b897a)
 
 ---
 
@@ -44,11 +44,11 @@ Note that solutions will not be printed, unless the `answers` option is passed t
 
 ---
 
-![without-answers-1](https://github.com/user-attachments/assets/f14a284c-f4cc-40d9-9a5a-9b7fc1cd5de2)
+![without-answers-1](https://github.com/user-attachments/assets/00c90af8-da87-417b-9a08-8e2ebcdac75c)
 
 ---
 
-![without-answers-2](https://github.com/user-attachments/assets/489ad630-6369-482b-b990-3ffa7fbe1963)
+![without-answers-2](https://github.com/user-attachments/assets/c525c5de-9f33-4b72-ae8b-af88873d4d6b)
 
 
 
