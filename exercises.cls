@@ -114,3 +114,16 @@
 
 % todo command
 \newcommand{\todo}{The solution is not written out yet.}
+
+% puts a \penalty-325 before each \question
+% penalty value can be modified
+% it is also possible to use \filbreak instead of \penalty<num>
+\let\beginoldquestions\questions
+\let\endoldquestions\endquestions
+\renewenvironment{questions}{%
+	\beginoldquestions%
+	\let\oldquestion\question%
+	\def\question{\penalty-325\oldquestion}%
+}{%
+	\endoldquestions%
+}
