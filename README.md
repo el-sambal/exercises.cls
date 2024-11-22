@@ -8,6 +8,7 @@ In particular, some customizations done by this class are:
 - The `solution` environment is redefined as a `tcolorbox` with some custom style features (for example, the box breaks nicely over multiple pages and there is a visual indicator in case this happens).
 - This class by default has a header at the top of each page.
 - The university logo is in the top-left of the page.
+- Some prevention against over-ugly page breaks.
 
 Note that solutions will not be printed, unless the `answers` option is passed to the class, as follows:
 ```tex
@@ -20,22 +21,35 @@ Note to RUG staff: the RUG logo can be found [HERE](https://www.rug.nl/about-ug/
 
 ---
 
-### Note on page breaking
+### Notes on page breaking
 
-Most users do not want to have page breaks in the middle of (short) questions, but sometimes $\LaTeX$ does this anyway. To prevent this issue, here are some tips (which are useful in general):
+Most users do not want to have page breaks in the middle of (short) questions. This section lists some tricks to prevent this from happening. The `exercises` class by default applies the third trick.
  - You can insert `\filbreak`s before `\question`s that you don't want broken up (usually, the shorter questions).
  - You can define a custom negative page break penalty to encourage $\LaTeX$ to break at a certain point, e.g. `\penalty-325 \question Question...`.
- - If you want to automatically insert `\filbreak`s before *all* questions, put the following code all the way at the bottom of `exercises.sty`. When the questions are longer, this approach can create much whitespace, so this 'automatic' approach is not always optimal.
+ - If you want to automatically insert `\penalty`s (or `\filbreak`s) before *all* questions, the following code should be at the bottom of `exercises.sty` (it is there by default):
 ```tex
-% puts a \filbreak before each \question
+% puts a \penalty-325 before each \question
+% penalty value can be modified
+% it is also possible to use \filbreak instead of \penalty<num>
 \let\beginoldquestions\questions
 \let\endoldquestions\endquestions
 \renewenvironment{questions}{%
 	\beginoldquestions%
     \let\oldquestion\question%
-    \def\question{\filbreak\oldquestion}%
+    \def\question{\penalty-325\oldquestion}%
 }{%
 	\endoldquestions%
+}
+```
+- Similarly, to automatically insert `\penalty`s (or `\filbreak`s) before all *solutions*, you could put this code at the bottom of `exercises.sty`:
+```tex
+% puts a \penalty-325 before each solution
+\let\beginoldsolution\solution
+\let\endoldsolution\endsolution
+\renewenvironment{solution}{%
+    \penalty-325\beginoldsolution%
+}{%
+	\endoldsolution%
 }
 ```
 
