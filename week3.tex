@@ -13,7 +13,7 @@ Prove that for all $n\in\N_0$, for all finite sets $A_1,A_2,\dots,A_n$, \[\left|
 
 	We proceed using mathematical induction to prove the statement for all $n\geq2$. We have already proved the case $n=2$ and will use it as a base case.
 
-	Assume as induction hypothesis that the statement holds for some $n=k\geq2$. We have to show that it holds for $n=k+1$. That is, we have to show that for all finite sets $A_1,A_2,\dots,A_{k+1}$, \[\left|\bigcup_{i=1}^{k+1} A_i\right| = \sum_{\emptyset\neq J\subseteq\{1,\dots,k+1\}}(-1)^{|J|+1}\left|\bigcap_{j\in J}A_j\right|.\]
+	Assume as induction hypothesis that the statement holds for some arbitrary $n=k\geq2$. We have to show that it holds for $n=k+1$. That is, we have to show that for all finite sets $A_1,A_2,\dots,A_{k+1}$, \[\left|\bigcup_{i=1}^{k+1} A_i\right| = \sum_{\emptyset\neq J\subseteq\{1,\dots,k+1\}}(-1)^{|J|+1}\left|\bigcap_{j\in J}A_j\right|.\]
 	We can reach the right-hand side from the left-hand side as follows:
 	\begingroup
 	\allowdisplaybreaks % to allow the align* to break up over pages
