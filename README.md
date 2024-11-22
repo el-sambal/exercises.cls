@@ -20,7 +20,30 @@ Note to RUG staff: the RUG logo can be found [HERE](https://www.rug.nl/about-ug/
 
 ---
 
-***WITH SOLUTIONS***, it looks like this (click [HERE](https://el-sambal.github.io/exercises.cls/with-answers.pdf) for an actual pdf):
+### Note on page breaking
+
+Most users do not want to have page breaks in the middle of (short) questions, but sometimes $\LaTeX$ does this anyway. To prevent this issue, here are some tips (which are useful in general):
+ - You can insert `\filbreak`s before `\question`s that you don't want broken up (usually, the shorter questions).
+ - You can define a custom negative page break penalty to encourage $\LaTeX$ to break at a certain point, e.g. `\penalty-325 \question Question...`.
+ - If you want to automatically insert `\filbreak`s before *all* questions, put the following code all the way at the bottom of `exercises.sty`. When the questions are longer, this approach can create much whitespace, so this 'automatic' approach is not always optimal.
+```tex
+% puts a \filbreak before each \question
+\let\beginoldquestions\questions
+\let\endoldquestions\endquestions
+\renewenvironment{questions}{%
+	\beginoldquestions%
+    \let\oldquestion\question%
+    \def\question{\filbreak\oldquestion}%
+}{%
+	\endoldquestions%
+}
+```
+
+---
+
+### Showcase
+
+***WITH SOLUTIONS***, the example document in this repository looks like this (click [HERE](https://el-sambal.github.io/exercises.cls/with-answers.pdf) for an actual pdf):
 
 ---
 
