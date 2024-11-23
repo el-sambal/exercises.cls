@@ -61,19 +61,19 @@ Most users do not want to have page breaks in the middle of (short) questions. T
 
 ---
 
-![with-answers-1](https://github.com/user-attachments/assets/5f6ba236-86e5-4415-ade8-3e9411deb4ed)
+![with-answers-1](https://github.com/user-attachments/assets/37adddcf-a7e8-452d-bb71-87174a992fdc)
 
 ---
 
-![with-answers-2](https://github.com/user-attachments/assets/20deb28c-9b5e-49ef-bb5d-be8c06cb5b69)
+![with-answers-2](https://github.com/user-attachments/assets/95305c91-7837-4865-b1a1-1b3dc852c0e1)
 
 ---
 
-![with-answers-3](https://github.com/user-attachments/assets/98273ac8-fbfc-4bf0-9164-4001db7c5641)
+![with-answers-3](https://github.com/user-attachments/assets/f5cf3c98-6dd4-4ec4-8f1f-4ce8163e13c1)
 
 ---
 
-![with-answers-4](https://github.com/user-attachments/assets/bc576779-fe71-4d6e-8f29-2691c67b897a)
+![with-answers-4](https://github.com/user-attachments/assets/8e1c0bcf-8c5f-4c7a-9e0c-a1107ed23bbc)
 
 ---
 
@@ -83,11 +83,10 @@ Most users do not want to have page breaks in the middle of (short) questions. T
 
 ---
 
-![without-answers-1](https://github.com/user-attachments/assets/00c90af8-da87-417b-9a08-8e2ebcdac75c)
+![without-answers-1](https://github.com/user-attachments/assets/3fac0d9c-476a-4007-a365-15ea4982cb27)
 
 ---
 
-![without-answers-2](https://github.com/user-attachments/assets/c525c5de-9f33-4b72-ae8b-af88873d4d6b)
-
+![without-answers-2](https://github.com/user-attachments/assets/64b04384-b94e-4bb5-b2a4-c3d462558bbe)
 
 
