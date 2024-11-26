@@ -34,6 +34,13 @@
 \savebox{\logo}{\includegraphics[width=4cm]{logo}}
 \AddToShipoutPicture{\put(\LenToUnit{0.6cm},\LenToUnit{\paperheight-1.6cm}){\usebox\logo}}
 
+% these commands control the default colors used by tcolorboxes.
+% user can tweak them inside the main document!
+\newcommand\colback{green!7}
+\newcommand\coltitle{blue!50!black}
+\newcommand\colbacktitle{blue!5}
+\newcommand\colborder{blue}
+
 % nice boxes!
 \newtcolorbox{nicebox}[2]{
 	% this box is inspired by the example on page 412 of the manual for tcolorbox version 6.4.1
@@ -44,40 +51,40 @@
 	skin middle=enhanced,
 	skin last=enhanced,
 	tile,
-	colback=green!7,coltitle=blue!50!black,colbacktitle=blue!5,
+	colback=\colback,coltitle=\coltitle,colbacktitle=\colbacktitle,
 	center title,
 	toprule=1.25mm,bottomrule=1.25mm,
 	extras={
-			borderline west={0.2mm}{0mm}{blue,decorate,dotted,shorten <=0.5mm,shorten >=0.5mm},
-			borderline east={0.2mm}{0mm}{blue,decorate,dotted,shorten <=0.5mm,shorten >=0.5mm},
+			borderline west={0.2mm}{0mm}{\colborder,decorate,dotted,shorten <=0.5mm,shorten >=0.5mm},
+			borderline east={0.2mm}{0mm}{\colborder,decorate,dotted,shorten <=0.5mm,shorten >=0.5mm},
 		},
 	extras unbroken and first={
-			borderline north={0.25mm}{0.5mm}{blue,decoration={zigzag,amplitude=0.5mm},decorate}
+			borderline north={0.25mm}{0.5mm}{\colborder,decoration={zigzag,amplitude=0.5mm},decorate}
 		},
 	extras unbroken and last={
-			borderline south={0.25mm}{0.5mm}{blue,decoration={zigzag,amplitude=0.5mm},decorate}
+			borderline south={0.25mm}{0.5mm}{\colborder,decoration={zigzag,amplitude=0.5mm},decorate}
 		},
 	% the following overlay options are adapted from user194703's answer here:
 	% https://tex.stackexchange.com/questions/545320/how-to-more-visibly-indicate-that-a-tcolorbox-has-broken
 	overlay first={%
 			\path[font=\small\itshape] (frame.south) node (cont) {(continued)};
-			\draw[blue!50,decoration={zigzag,amplitude=0.5mm},decorate]
+			\draw[\colborder!50,decoration={zigzag,amplitude=0.5mm},decorate]
 			(frame.south west) -- (cont.west)
 			(frame.south east) -- (cont.east);
 		},
 	overlay middle={%
 			\path[font=\small\itshape] (frame.north) node (cont) {(continued)};
-			\draw[blue!50,decoration={zigzag,amplitude=0.5mm},decorate]
+			\draw[\colborder!50,decoration={zigzag,amplitude=0.5mm},decorate]
 			(frame.north west) -- (cont.west)
 			(frame.north east) -- (cont.east);
 			\path[font=\small\itshape] (frame.south) node (cont2) {(continued)};
-			\draw[blue!50,decoration={zigzag,amplitude=0.5mm},decorate]
+			\draw[\colborder!50,decoration={zigzag,amplitude=0.5mm},decorate]
 			(frame.south west) -- (cont2.west)
 			(frame.south east) -- (cont2.east);
 		},
 	overlay last={%
 			\path[font=\small\itshape] (frame.north) node (cont) {(continued)};
-			\draw[blue!50,decoration={zigzag,amplitude=0.5mm},decorate]
+			\draw[\colborder!50,decoration={zigzag,amplitude=0.5mm},decorate]
 			(frame.north west) -- (cont.west)
 			(frame.north east) -- (cont.east);
 		},
