@@ -110,7 +110,16 @@
 }
 
 % question format
-\qformat{\textbf{Question \thequestion.\hfill}}
+\newcommand{\ptscolor}{\color{blue}} % can renew this command inside document!
+\newcommand\ptsfmt{%
+	\if@placepoints%
+		\ {\ptscolor(total \thepoints)}%
+	\fi%
+}
+\pointformat{\ptscolor(\thepoints)}
+\bonuspointformat{\ptscolor(\thepoints)}
+\qformat{\textbf{Question \thequestion\ptsfmt. \hfill}}
+\bonusqformat{\textbf{Question \thequestion\ptsfmt. \hfill}}
 
 % todo command
 \newcommand{\todo}{The solution is not written out yet.}
