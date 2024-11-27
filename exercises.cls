@@ -151,15 +151,17 @@
 % todo command
 \newcommand{\todo}{The solution is not written out yet.}
 
-% puts a \penalty-325 before each \question
-% penalty value can be modified
-% it is also possible to use \filbreak instead of \penalty<num>
+% this code is supposed to make sure there is no page break right
+% after a line like "Question 5 (42 points).", and it seems to work!
+% the idea to use \vfil\pagebreak[2]\vfilneg is borrowed from
+% D. Arseneau, who answered this SE question:
+% https://tex.stackexchange.com/questions/535641/dynamic-page-break-before-section
 \let\beginoldquestions\questions
 \let\endoldquestions\endquestions
 \renewenvironment{questions}{%
 	\beginoldquestions%
 	\let\oldquestion\question%
-	\def\question{\penalty-325\oldquestion}%
+	\def\question{\vfil\pagebreak[2]\vfilneg\oldquestion}%
 }{%
 	\endoldquestions%
 }
