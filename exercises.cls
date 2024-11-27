@@ -1,5 +1,27 @@
 % Author: A. Hardeman
 
+% ===================================================================================== %
+
+% The commands in here can be \renewcommand'd by the user in their main document.
+% This allows for extra customization by the user. The default values are defined here.
+
+% The color in which the amounts of points are printed:
+\newcommand\ptscolor{\color{blue}}
+
+% Colors used for tcolorboxes (solution boxes and 'instructions' boxes):
+\newcommand\colback{green!7}
+\newcommand\coltitle{blue!50!black}
+\newcommand\colbacktitle{blue!5}
+\newcommand\colborder{blue}
+
+% The title of the 'instructions' box
+\newcommand\instructionsboxtitle{Instructions}
+
+% The title of solution boxes
+\newcommand\solutionboxtitle{Solution}
+
+% ===================================================================================== %
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{exercises}[2024/11/18 Class to typeset a document containing exercises and solutions]
 
@@ -34,12 +56,6 @@
 \savebox{\logo}{\includegraphics[width=4cm]{logo}}
 \AddToShipoutPicture{\put(\LenToUnit{0.6cm},\LenToUnit{\paperheight-1.6cm}){\usebox\logo}}
 
-% these commands control the default colors used by tcolorboxes.
-% user can tweak them inside the main document!
-\newcommand\colback{green!7}
-\newcommand\coltitle{blue!50!black}
-\newcommand\colbacktitle{blue!5}
-\newcommand\colborder{blue}
 
 % nice boxes!
 \newtcolorbox{nicebox}[2]{
@@ -97,7 +113,7 @@
 \renewenvironment{TheSolution}{
 	% grow solution boxes 6mm to the left, so that they appear to be
 	% in the middle of the page (not impacted by question indentation)
-	\begin{nicebox}{Solution}{6mm}
+	\begin{nicebox}{\solutionboxtitle}{6mm}
 		}{
 	\end{nicebox}
 }
@@ -106,7 +122,7 @@
 \newenvironment{instructions}{
 	\begin{center}
 		\begin{minipage}{0.93\textwidth}
-			\begin{nicebox}{Instructions}{0mm}
+			\begin{nicebox}{\instructionsboxtitle}{0mm}
 				\begin{center}
 					}{
 				\end{center}
@@ -117,7 +133,8 @@
 }
 
 % question format
-\newcommand{\ptscolor}{\color{blue}} % can renew this command inside document!
+\renewcommand\bonuspoint@sing{point, bonus}
+\renewcommand\bonuspoint@plur{points, bonus}
 \newcommand\ptsfmt{%
 	\if@placepoints%
 		\ {\ptscolor(total \thepoints)}%
