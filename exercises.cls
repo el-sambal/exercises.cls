@@ -28,7 +28,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{exercises}[2024/11/18 Class to typeset a document containing exercises and solutions]
 
-% one can pass the 'answers' option to the class to show answers
+% One can pass the 'answers' option to the class to show answers
 \DeclareOption{answers}{\PassOptionsToClass{answers}{exam}}
 \ProcessOptions\relax
 \LoadClass{exam}
@@ -37,6 +37,7 @@
 \RequirePackage{tikz}\usetikzlibrary{decorations.pathmorphing}
 \RequirePackage{tcolorbox}\tcbuselibrary{skins,breakable}
 \RequirePackage{mlmodern}
+\RequirePackage{needspace}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{geometry}\geometry{a4paper,left=25mm,right=25mm,top=40mm,bottom=30mm}
 
@@ -44,23 +45,23 @@
 \newcommand{\blue}[1]{\textcolor{blue}{#1}}
 \newcommand{\green}[1]{\textcolor{green!70!black}{#1}}
 
-% to print a question author's name in the bottom-right of the solution box
+% To print a question author's name in the bottom-right of the solution box
 \newcommand{\QAuthor}[1]{\null\hfill{\footnotesize\color{\QAuthorcolor}#1}}
 
-% page header
+% Page header
 \pagestyle{head}
 \runningheader{\headerleft}{\headermiddle}{\headerright}
 \runningheadrule
 \extraheadheight{-.25in}
 
-% university logo in top-left corner of page (can tweak the offsets)
+% University logo in top-left corner of page (can tweak the offsets)
 \RequirePackage{eso-pic}
 \newsavebox{\logo}
 \savebox{\logo}{\includegraphics[width=4cm]{logo}}
 \AddToShipoutPicture{\put(\LenToUnit{0.6cm},\LenToUnit{\paperheight-1.6cm}){\usebox\logo}}
 
 
-% nice boxes!
+% Nice boxes!
 \newtcolorbox{nicebox}[2]{
 	% this box is inspired by the example on page 412 of the manual for tcolorbox version 6.4.1
 	% https://ctan.org/pkg/tcolorbox?lang=en
@@ -112,7 +113,7 @@
 	parbox=false % to mimic \usepackage{parskip} inside the box
 }
 
-% custom solution boxes
+% Custom solution boxes
 \renewenvironment{TheSolution}{
 	% grow solution boxes 6mm to the left, so that they appear to be
 	% in the middle of the page (not impacted by question indentation)
@@ -121,7 +122,7 @@
 	\end{nicebox}
 }
 
-% instruction box, at the top of the page
+% Instruction box, at the top of the page
 \newenvironment{instructions}{
 	\begin{center}
 		\begin{minipage}{0.93\textwidth}
@@ -135,7 +136,7 @@
 	\vspace{8mm}
 }
 
-% question format
+% Question format
 \renewcommand\bonuspoint@sing{point, bonus}
 \renewcommand\bonuspoint@plur{points, bonus}
 \newcommand\ptsfmt{%
@@ -148,20 +149,16 @@
 \qformat{\textbf{Question \thequestion\ptsfmt. \hfill}}
 \bonusqformat{\textbf{Question \thequestion\ptsfmt. \hfill}}
 
-% todo command
+% Todo command
 \newcommand{\todo}{The solution is not written out yet.}
 
-% this code is supposed to make sure there is no page break right
-% after a line like "Question 5 (42 points).", and it seems to work!
-% the idea to use \vfil\pagebreak[2]\vfilneg is borrowed from
-% D. Arseneau, who answered this SE question:
-% https://tex.stackexchange.com/questions/535641/dynamic-page-break-before-section
+% Make sure there's no page break between a question 'title' and the question itself
 \let\beginoldquestions\questions
 \let\endoldquestions\endquestions
 \renewenvironment{questions}{%
 	\beginoldquestions%
 	\let\oldquestion\question%
-	\def\question{\vfil\pagebreak[2]\vfilneg\oldquestion}%
+	\def\question{\needspace{1cm}\oldquestion}%
 }{%
 	\endoldquestions%
 }
