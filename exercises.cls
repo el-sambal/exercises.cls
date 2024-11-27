@@ -20,6 +20,9 @@
 % The title of solution boxes
 \newcommand\solutionboxtitle{Solution}
 
+% Color of a \QAuthor mention
+\newcommand\QAuthorcolor{blue!20!white}
+
 % ===================================================================================== %
 
 \NeedsTeXFormat{LaTeX2e}
@@ -42,7 +45,7 @@
 \newcommand{\green}[1]{\textcolor{green!70!black}{#1}}
 
 % to print a question author's name in the bottom-right of the solution box
-\newcommand{\QAuthor}[1]{\null\hfill{\footnotesize\color{blue!20!white}#1}}
+\newcommand{\QAuthor}[1]{\null\hfill{\footnotesize\color{\QAuthorcolor}#1}}
 
 % page header
 \pagestyle{head}

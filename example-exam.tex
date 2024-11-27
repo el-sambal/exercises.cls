@@ -1,0 +1,79 @@
+\documentclass[answers]{exercises}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{comment}
+
+% custom colors
+\renewcommand\colback{red!7}
+\renewcommand\coltitle{red!50!black}
+\renewcommand\colbacktitle{red!5}
+\renewcommand\colborder{red}
+\renewcommand\ptscolor{\color{red}}
+\renewcommand\QAuthorcolor{orange!90}
+
+% custom box titles
+\renewcommand\instructionsboxtitle{Instructions (READ CAREFULLY)}
+\renewcommand\solutionboxtitle{Solution sketch}
+
+% header
+\newcommand{\headerleft}{Example Course (2024-2025)}
+\newcommand{\headermiddle}{}
+\newcommand{\headerright}{Midterm exam, page \thepage{} of \numpages}
+
+\renewcommand\O{\mathcal O}
+
+\begin{document}
+\begin{center}
+	{\LARGE Example course: Midterm Exam}
+
+	\vspace{3mm}
+	{\large Duration: two (2) hours}
+\end{center}
+\vspace{5mm}
+
+\begin{instructions}
+	\begin{itemize}
+		\item \textbf{Write your student number at the top-right of each page! We advise to do this at the beginning of the exam. Papers without student-number will be invalid.}
+		\item Write with a black or dark blue pen. \textbf{Do NOT use pencil}. Write clearly and legibly.
+		      %\item You \textbf{ARE} allowed to use a simple, {non-graphical, non-programmable} calculator.
+		\item The exam is {closed-book}: you are \textbf{NOT} allowed to consult any course material or notes during the exam.
+		      You are \textbf{NOT} allowed to communicate with other students.
+		      %\item Place your student card on the top-left corner of your table for inspection.
+		\item You can obtain 100 regular points and 10 bonus points. Your grade is equal to the number of points you obtained divided by 10, with a maximum of 10.
+		\item Good luck!
+	\end{itemize}
+\end{instructions}
+
+
+\begin{questions}
+	\question[42] Given a sequence of integers $A=a_1,a_2,\dots,a_n$ in which all elements are between $1$ and $m$ inclusive, suggest an $\O(n(m+\log n))$ time algorithm that computes the number of subsequences $B$ of $A$ such that $\sum B\geq\frac23\sum A$ and $\sum C<\frac23\sum A$ for all subsequences $C$ obtained by removing one element from $B$.
+
+	\begin{solution}
+		One can use dynamic programming.
+		\QAuthor{Inspired by problem D from NWERC 2024.}
+	\end{solution}
+
+	\question[42] Given is a sequence of integers $A=a_1,a_2,\dots,a_n$. Suggest an algorithm that computes in $\O(n\log n)$ time the sequence $B=b_1,b_2,b_n$ where $b_i$ is the number of indices $j$ such that $j>i$ and $a_j>a_i$.
+
+	\begin{solution}
+		One can adapt the algorithm for merge sort.
+	\end{solution}
+
+	\question[16] Come up with some other interesting question to use in this example document.
+	\begin{parts}
+		\part[15] Maybe about segment trees?
+		\part[1] Or maybe about a probabilistic algorithm?
+	\end{parts}
+
+	\begin{solution}
+		Uh, I don't know?
+	\end{solution}
+
+	\bonusquestion[10] This is a bonus question!
+	\begin{solution}
+		Okay, nice!
+	\end{solution}
+
+\end{questions}
+\end{document}
