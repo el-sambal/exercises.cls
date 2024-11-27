@@ -1,6 +1,6 @@
 # exercises.cls
 
-This repository contains the file `exercises.cls`, a $\LaTeX$ class based on the `exam` class. It can be used to write course worksheets or homework assignments (or exams, perhaps). Some other files are also present in the repository, to form a working example.
+This repository contains the file `exercises.cls`, a $\LaTeX$ class based on the `exam` class. It can be used to write worksheets, homework assignments and exams. There are two working examples: `example-worksheet.tex` and `example-exam.tex`.
 
 The main difference between this class and the `exam` class is that this class has some basic customizations which I happen to like.
 
@@ -57,7 +57,7 @@ Most users do not want to have page breaks in the middle of (short) questions. T
 
 ### Showcase
 
-***WITH SOLUTIONS***, the example document in this repository looks like this (click [HERE](https://el-sambal.github.io/exercises.cls/with-answers.pdf) for an actual pdf):
+***WITH SOLUTIONS***, the document generated from `example-worksheet.tex` looks like this (click [HERE](https://el-sambal.github.io/exercises.cls/with-answers.pdf) for an actual pdf):
 
 ---
 
