@@ -159,6 +159,8 @@
 	\beginoldquestions%
 	\let\oldquestion\question%
 	\def\question{\needspace{1cm}\oldquestion}%
+	\let\oldbonusquestion\bonusquestion%
+	\def\bonusquestion{\needspace{1cm}\oldbonusquestion}%
 }{%
 	\endoldquestions%
 }
