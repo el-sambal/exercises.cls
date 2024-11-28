@@ -40,6 +40,7 @@
 \RequirePackage{needspace}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{geometry}\geometry{a4paper,left=25mm,right=25mm,top=40mm,bottom=30mm}
+\RequirePackage{microtype}
 
 \newcommand{\red}[1]{\textcolor{red}{#1}}
 \newcommand{\blue}[1]{\textcolor{blue}{#1}}
