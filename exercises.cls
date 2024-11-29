@@ -116,9 +116,9 @@
 
 % Custom solution boxes
 \renewenvironment{TheSolution}{
-	% grow solution boxes 6mm to the left, so that they appear to be
+	% grow solution boxes \@totalleftmargin to the left, so that they appear to be
 	% in the middle of the page (not impacted by question indentation)
-	\begin{nicebox}{\solutionboxtitle}{6mm}
+	\begin{nicebox}{\solutionboxtitle}{\@totalleftmargin}
 		}{
 	\end{nicebox}
 }
