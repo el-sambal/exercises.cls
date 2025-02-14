@@ -23,13 +23,53 @@
 % Color of a \QAuthor mention
 \newcommand\QAuthorcolor{blue!20!white}
 
+% How to display grading information (if the 'grading' option is passed to the class)
+\newcommand\gcolor{red!95}
+\newcommand\gpts[1]{\ginfo{(#1 points)}}
+\newcommand\ginfo[1]{%
+    \unskip%
+    \ifthenelse{\boolean{showgradinginfo}}{%
+        \space%
+        {\color{\gcolor}#1}%
+    }{}%
+    \@ifnextchar{.}{}{%
+    \@ifnextchar{,}{}{%
+    \@ifnextchar{:}{}{%
+    \@ifnextchar{;}{}{%
+    \@ifnextchar{)}{}{%
+    \@ifnextchar{]}{}{%
+    \@ifnextchar{!}{}{%
+    \@ifnextchar{?}{}{%
+    \@ifnextchar{"}{}{%
+    \@ifnextchar{`}{}{%
+    \@ifnextchar{'}{}{%
+        \space%
+        \ignorespaces%
+    }}}}}}}}}}}%
+}
+
+
 % ===================================================================================== %
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{exercises}[2024/11/18 Class to typeset a document containing exercises and solutions]
 
-% One can pass the 'answers' option to the class to show answers
+\RequirePackage{ifthen}
+\newboolean{showgradinginfo}
+\setboolean{showgradinginfo}{false}
+\newcommand\showifgrading[1]{%
+    \ifthenelse{\boolean{showgradinginfo}}{%
+        #1%
+    }{}%
+}
+
+% Pass the 'answers' option to the class to show answers
 \DeclareOption{answers}{\PassOptionsToClass{answers}{exam}}
+
+% Pass the 'grading' option to the class to show answers and grading information
+% Grading information is information within \gpts{...} or \ginfo{...}
+\DeclareOption{grading}{\PassOptionsToClass{answers}{exam}\setboolean{showgradinginfo}{true}}
+
 \ProcessOptions\relax
 \LoadClass{exam}
 

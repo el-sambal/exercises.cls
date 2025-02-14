@@ -2,7 +2,7 @@
 
 ---
 
-The latest pdfs of the example documents can be found here:
+The latest pdfs of the example documents can be found here (there is currently no example that demonstrates the `grading` option):
 - [exam (with answers)](https://el-sambal.github.io/exercises.cls/exam-with-answers.pdf),
 - [exam (without answers)](https://el-sambal.github.io/exercises.cls/exam-without-answers.pdf).
 - [worksheet (with answers)](https://el-sambal.github.io/exercises.cls/worksheet-with-answers.pdf),
@@ -16,7 +16,8 @@ The main difference between this class and the `exam` class is that this class h
 
 In particular, some customizations done by this class are:
 - The `solution` environment is redefined as a `tcolorbox` with some custom style features (for example, the box breaks nicely over multiple pages and there is a visual indicator in case this happens).
-- This class by default has a header at the top of each page.
+- There are two nice macros to conditionally display grading information.
+- The class by default has a header at the top of each page.
 - The university logo is in the top-left of the page.
 - Some prevention against over-ugly page breaks.
 
@@ -25,6 +26,12 @@ Note that solutions will not be printed, unless the `answers` option is passed t
 \documentclass[answers]{exercises}
 ```
 Alternatively, the options `\printanswers` and `\noprintanswers` can be used.
+
+Additional grading information (i.e. everything inside `\gpts` and `\ginfo`) is displayed if the `grading` option is passed to the class:
+```tex
+\documentclass[grading]{exercises}
+```
+Whenever `grading` is given, the answers will also automatically be displayed.
 
 ---
 
